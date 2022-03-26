@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Permanent+Marker&family=Staatliches&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --logo-font: "staatliches", arial;
+  --main-font: "Permanent Marker", arial;
+  --secondary-font: "open sans", arial;
+  --button-color: #660708;
+  --grey-light: hsl(0, 0%, 83%);
+  --grey-light-opacity: hsl(0, 0%, 83%, 0.4);
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  background: transparent;
+  height: auto;
+  z-index: 1;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+  padding-right: 2em;
+  list-style: none;
+}
+
+.list-item a {
+  text-decoration: none;
+  font-family: var(--main-font);
+  color: black;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.welcome-page {
+  height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.image-wrapper {
+  width: 50%;
+  max-width: 50%;
+  max-height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 150px;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 4rem;
+  font-family: var(--main-font);
+  letter-spacing: 5px;
+  color: black;
+  background-color: hsl(0, 0%, 91%, 0.4);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 150px;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  color: black;
+  font-family: var(--secondary-font);
+}
+
+figcaption a {
+  text-decoration: none;
+  color: black;
+}
+
+.sign-in-section {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading-wrapper {
+  width: 400px;
+  margin-bottom: 3em;
+}
+
+.heading {
+  text-align: center;
+  font-family: var(--main-font);
+}
+
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  gap: 1em;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+input:focus {
+  border: 1px solid #343a40;
+}
+
+.sign-in-input {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--grey-light);
+}
+
+.sign-in-label {
+  font-family: var(--secondary-font);
+  opacity: 0.4;
+  position: absolute;
+  bottom: 7px;
+  left: 15px;
+  font-size: 0.9rem;
+}
+
+.sign-in-input:focus + label {
+  opacity: 0;
+}
+
+.sign-in-input:not(:placeholder-shown) + label {
+  visibility: hidden;
+}
+
+button {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  font-family: var(--secondary-font);
+  cursor: pointer;
+}
+
+.log-in {
+  background-color: var(--button-color);
+  color: white;
+}
+
+.forgot-password,
+.create-account {
+  background-color: white;
+  color: var(--button-color);
+  border: 1px solid var(--button-color);
+  margin-top: 1em;
+}
+
+.modal-wrap {
+  height: 100%;
+  width: 100%;
+  background-color: var(--grey-light-opacity);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.modal {
+  height: auto;
+  min-height: 500px;
+  width: 400px;
+  background-color: white;
+  margin: auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal-heading {
+  font-family: var(--main-font);
+  margin-bottom: 2em;
+  font-size: 2rem;
+}
+
+.create-account-form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.modal-input-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-account-input {
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--grey-light);
+}
+
+.create-account-label {
+  font-family: var(--secondary-font);
+  opacity: 0.4;
+  position: absolute;
+  bottom: 7px;
+  left: 15px;
+  font-size: 0.9rem;
+}
+
+.create-account-input:focus + label {
+  opacity: 0;
+}
+
+.create-account-input:not(:placeholder-shown) + label {
+  visibility: hidden;
+}
+
+.modal-create-account {
+  background-color: var(--button-color);
+  color: white;
+  outline: none;
+}
+
+.close {
+  position: absolute;
+  width: 4px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  top: 20px;
+  right: 20px;
+  background: none;
+  cursor: pointer;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="tel"]:valid {
+  border: 2px solid green;
+}
+
+#sign-in-password:valid,
+#create-account-password:valid {
+  border: 2px solid green;
+}

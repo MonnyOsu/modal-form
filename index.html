@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Death Rowe</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="list-item"><a href="#">Home</a></li>
+        <li class="list-item"><a href="#">Store</a></li>
+        <li class="list-item"><a href="#">Instagram</a></li>
+        <li class="list-item"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="welcome-page">
+      <div class="image-wrapper">
+        <img src="./vinyl.jpg" alt="vinyl store" />
+        <div class="logo">Death Rowe</div>
+        <figcaption>
+          Photo by
+          <a
+            href="https://unsplash.com/@britti3?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Brittany Bendabout</a
+          >
+          on
+          <a
+            href="https://unsplash.com/s/photos/vinyl?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </figcaption>
+      </div>
+
+      <div class="sign-in-section">
+        <div class="heading-wrapper">
+          <h1 class="heading">Welcome To Death Rowe Records</h1>
+        </div>
+
+        <div class="sign-in-form-wrapper">
+          <form action="#" class="sign-in-form">
+            <div class="input-wrapper">
+              <input
+                type="text"
+                name="username"
+                id="username"
+                required
+                placeholder=" "
+                class="sign-in-input"
+              />
+              <label for="username" class="sign-in-label">Username</label>
+            </div>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="sign-in-password"
+                name="sign-in-password"
+                class="sign-in-input"
+                placeholder=" "
+                minlength="6"
+                required
+              />
+              <label for="sign-in-password" class="sign-in-label"
+                >Password</label
+              >
+            </div>
+
+            <button class="log-in">Log In</button>
+          </form>
+          <button class="forgot-password">Forgot Password?</button>
+          <button class="create-account" data-create-account-btn>
+            Create New Account
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-wrap" data-modal-wrap>
+        <div class="modal" data-modal>
+          <h2 class="modal-heading">Create an account</h2>
+
+          <form action="#" class="create-account-form">
+            <div class="modal-input-wrapper">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="create-account-input"
+                placeholder=" "
+                required
+              />
+              <label for="email" class="create-account-label">Email</label>
+            </div>
+            <div class="modal-input-wrapper">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                minlength="9"
+                pattern="^[0-9]+$"
+                class="create-account-input"
+                placeholder=" "
+                required
+              />
+              <label for="phone" class="create-account-label">Phone</label>
+            </div>
+            <div class="modal-input-wrapper">
+              <input
+                type="password"
+                id="create-account-password"
+                name="password"
+                class="create-account-input"
+                placeholder=" "
+                minlength="6"
+                data-password
+                required
+              />
+              <label for="password" class="create-account-label"
+                >Password</label
+              >
+            </div>
+            <div class="modal-input-wrapper">
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                class="create-account-input"
+                placeholder=" "
+                data-confirm-password
+                required
+              />
+              <label for="confirm-password" class="create-account-label"
+                >Confirm Password</label
+              >
+            </div>
+
+            <button
+              type="submit"
+              class="modal-create-account"
+              data-create-account-submit
+            >
+              Create Account
+            </button>
+          </form>
+          <button class="close" data-modal-close>X</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
